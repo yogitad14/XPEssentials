@@ -81,6 +81,7 @@ namespace XPEssentials.Tests
         /// <summary>
         /// Test to check failure reflected in extentreport
         /// </summary>
+        [Ignore("Ignore this test")]
         [Test]
         public void TestforFailure()
         {
