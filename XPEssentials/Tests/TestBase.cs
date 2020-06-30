@@ -1,9 +1,12 @@
 ﻿using AventStack.ExtentReports;
 using AventStack.ExtentReports.Reporter;
+
 using NUnit.Framework;
 using NUnit.Framework.Interfaces;
+
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+
 using System;
 
 namespace XPEssentials.Tests
