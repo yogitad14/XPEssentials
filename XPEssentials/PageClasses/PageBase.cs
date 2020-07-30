@@ -6,7 +6,7 @@ namespace XPEssentials.PageClasses
     {
         protected readonly IWebDriver _driver;
         protected readonly int _defaultWaitTime=30;
-        private Action actions;
+        public Action actions;
 
         public PageBase(IWebDriver driver)
         {
