@@ -78,14 +78,14 @@ namespace XPEssentials.Tests
 
 
 
-        /// <summary>
-        /// Test to check failure reflected in extentreport
-        /// </summary>
-        [Ignore("Ignore this test")]
-        [Test]
-        public void TestforFailure()
-        {
-            Assert.AreEqual("string1", "string2");
-        }
+        ///// <summary>
+        ///// Test to check failure reflected in extentreport
+        ///// </summary>
+        //[Ignore("Ignore this test")]
+        //[Test]
+        //public void TestforFailure()
+        //{
+        //    Assert.AreEqual("string1", "string2");
+        //}
     }
 }
