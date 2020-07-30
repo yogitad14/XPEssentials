@@ -36,7 +36,6 @@ namespace XPEssentials.Tests
             test = extent.CreateTest(TestContext.CurrentContext.Test.Name);
             driver = new ChromeDriver();
             driver.Manage().Window.Maximize();
-            driver.Navigate().GoToUrl("https://www.automation.com/");
 
         }
 

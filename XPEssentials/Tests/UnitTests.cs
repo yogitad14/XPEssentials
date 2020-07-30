@@ -6,11 +6,13 @@ using XPEssentials.PageClasses;
 
 namespace XPEssentials.Tests
 {
-    public class UnitTests:TestBase
+    public class UnitTests : TestBase
     {
         [Test]
         public void NavigateToArchievedNewsLetterTest()
         {
+            driver.Navigate().GoToUrl("https://www.automation.com/");
+
             AutomationHomePage homePage = new AutomationHomePage(driver);
 
             IndustriesPage industriesPage = homePage.NavigateToIndustriesPage();
@@ -28,6 +30,7 @@ namespace XPEssentials.Tests
         {
             string keyword = "weidmuller";
             string category = "Components / Terminal Blocks";
+            driver.Navigate().GoToUrl("https://www.automation.com/");
 
             AutomationHomePage homePage = new AutomationHomePage(driver);
 
@@ -63,6 +66,7 @@ namespace XPEssentials.Tests
         {
             string RegionOfWorld = "South Asia";
             string RegionOfUnitedStates = "West South Central (South)";
+            driver.Navigate().GoToUrl("https://www.automation.com/");
 
             AutomationHomePage homePage = new AutomationHomePage(driver);
 
@@ -78,14 +82,35 @@ namespace XPEssentials.Tests
 
 
 
-        ///// <summary>
-        ///// Test to check failure reflected in extentreport
-        ///// </summary>
-        //[Ignore("Ignore this test")]
-        //[Test]
-        //public void TestforFailure()
-        //{
-        //    Assert.AreEqual("string1", "string2");
-        //}
+        /// <summary>
+        /// test to check failure reflected in extentreport
+        /// </summary>
+        [Test]
+        public void testforSuccess()
+        {
+            Assert.AreEqual("string1", "string1");
+        }
+
+        [Test]
+        public void TestClickGoogleSignInButton()
+        {
+            driver.Navigate().GoToUrl("https://www.google.com");
+
+            IWebElement element = driver.FindElement(By.Id("gb_70"));
+            element.Click();
+        }
+
+        // 2.Search on Google page
+        [Test]
+        public void TestSearchOnGoogle()
+        {
+            driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(20);
+            driver.Navigate().GoToUrl("https://www.google.com");
+
+            IWebElement searchElement = driver.FindElement(By.Name("q"));
+            searchElement.SendKeys("Selenium tutorial");
+            searchElement.SendKeys(Keys.Enter);
+        }
+
     }
 }
